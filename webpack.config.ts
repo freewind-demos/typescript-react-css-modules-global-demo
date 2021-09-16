@@ -1,4 +1,4 @@
-import {Configuration} from 'webpack';
+import { Configuration } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 
@@ -19,7 +19,20 @@ const config: Configuration = {
       loader: 'ts-loader',
       exclude: /node_modules/
     }, {
+      test: /\.module\.css$/,
+      use: [
+        'style-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 1,
+            modules: true
+          }
+        }
+      ],
+    }, {
       test: /\.css$/,
+      exclude: /\.module\.css$/,
       loader: ['style-loader', 'css-loader'],
     }
     ]
