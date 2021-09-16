@@ -1,9 +1,8 @@
-import React, { FC } from 'react';
+import React, {FC} from 'react';
+import styles from './hello.css';
 
-type Props = {};
-
-export const Hello: FC<Props> = ({}) => {
+export const Hello: FC = () => {
   return <div>
-    <h1>Hello React</h1>
+    <h1 className={styles.title}>Hello React</h1>
   </div>;
 }
