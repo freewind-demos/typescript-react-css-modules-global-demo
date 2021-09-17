@@ -1,4 +1,6 @@
-.title {
-  font-size: 40px;
-  color:red;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
