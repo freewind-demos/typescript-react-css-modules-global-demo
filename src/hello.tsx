@@ -1,9 +1,11 @@
-import React, { FC } from 'react';
-import styles from './hello.module.css';
-import './hello.css';
+import React, {FC} from 'react';
+import styles from './hello.module.pcss';
 
 export const Hello: FC = () => {
   return <div className="container">
-    <h1 className={styles.title}>Hello React</h1>
+    <h1 >Hello React</h1>
+    <div className={'body'}>
+      <div className={'text'}>Some text</div>
+    </div>
   </div>;
 }
